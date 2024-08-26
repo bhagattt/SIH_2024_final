@@ -1,0 +1,403 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px 0;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.business-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.menu,
+.login {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown:hover {
+  background-color: #e0e0e0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-bottom: 1px solid #e5e5e5;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.ind-emb {
+  width: 50px;
+  height: 55px;
+  overflow: hidden;
+}
+
+.ind-emb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.business-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 20px;
+}
+
+.login {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 20px;
+}
+
+.nep {
+  height: 55px;
+  overflow: hidden;
+}
+
+.nep img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.search-container button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+  background-color: #555;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  width: 200px;
+}
+
+.search-btn {
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.image-slider {
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.services {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 0 0 30%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+
+.service-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-card hr {
+  margin: 10px 0;
+  border-color: #e5e5e5;
+}
+
+.service-card button {
+  background-color: #333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.service-card button:hover {
+  background-color: #555;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.blog-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 0 0 32%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.blog-content .author {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.blog-content h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-content .excerpt {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.blog-footer .icon {
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wanna-help {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.wanna-help h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.wanna-help-email {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+}
+
+.wanna-help-email input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.wanna-help-email input:focus {
+  border-color: #333;
+}
+
+.wanna-help-submit button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.wanna-help-submit button:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
