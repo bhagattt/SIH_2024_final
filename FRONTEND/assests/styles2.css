@@ -1,0 +1,338 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #e6e3e3;
+}
+.logo a {
+  font-size: 24px;
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ind-emb {
+  width: 50px;
+  height: 55px;
+  overflow: hidden;
+}
+
+.ind-emb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navbar {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar a {
+  color: #020202;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #1e90ff;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.nep {
+  height: 55px;
+  overflow: hidden;
+}
+
+.nep img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-btn {
+  background-color: #fff;
+  color: #1b1b1b;
+  padding: 10px 25px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.blog-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.blog-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.blog-cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  flex: 0 0 32%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  border-radius: 8px;
+}
+
+.blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Arial", sans-serif;
+  background-color: #fefaf4;
+}
+
+.blog-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.blog-post {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.blog-post img {
+  width: 250px;
+  height: auto;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+  flex: 1;
+}
+
+.post-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.post-content p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.post-meta {
+  font-size: 14px;
+  color: #999;
+}
+
+.post-meta span {
+  margin-right: 10px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2%;
+}
+
+.contests,
+.ranking {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contests {
+  width: 70%;
+}
+
+.ranking {
+  width: 25%;
+}
+
+.contests h2,
+.ranking h2 {
+  margin-top: 0;
+}
+
+.contest-list,
+.ranking-list,
+.your-stats {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contest-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fffcfc;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.ranking-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #fffcfc;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.Redeem {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.redeem-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 24px;
+
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.redeem-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.redeem-button:active {
+  background-color: #3e8e41; /* Even darker green on click */
+  transform: translateY(1px); /* Slight push down on click */
+}
+
+.contest-details ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.virtual-button {
+  background-color: #f09581;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.virtual-button:hover {
+  background-color: #e08472;
+}
+
+.ranking-item {
+  background-color: #fdf9f9;
+  border: 1px solid #ddd;
+}
+
+.ranking-rank {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.your-stats li {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.about-container {
+  background-color: #cfb2a4;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.learn-more-btn {
+  background-color: #333;
+  color: #ffffff;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 4px;
+  display: inline-block;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #555;
+}
