@@ -84,6 +84,17 @@ body {
   background-color: #e0e0e0;
 }
 
+.img-of-day {
+  padding: 20px 0;
+  background-image: url("img-of-day.jpg");
+}
+
+.img-of-day a {
+  text-decoration: none;
+  color: #ffffff;
+  size: large;
+}
+
 .image-slider {
   position: relative;
   max-height: 500px;
