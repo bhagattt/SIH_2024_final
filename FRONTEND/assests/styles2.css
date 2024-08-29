@@ -84,95 +84,158 @@ body {
   background-color: #e0e0e0;
 }
 
-.blog-section {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.blog-section h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
-.blog-cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.blog-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-bottom: 20px;
-  flex: 0 0 32%;
-  box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: left;
-  border-radius: 8px;
-}
-
-.blog-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  font-family: "Arial", sans-serif;
-  background-color: #fefaf4;
-}
-
-.blog-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.blog-post {
-  display: flex;
+.main {
+  width: 80vw;
+  padding: 25px;
+  margin: 30px auto;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  overflow: hidden;
 }
 
-.blog-post img {
-  width: 250px;
-  height: auto;
-  object-fit: cover;
-}
-
-.post-content {
-  padding: 20px;
-  flex: 1;
-}
-
-.post-content h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.post-content p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.6;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7vh;
+  padding: 10px;
   margin-bottom: 20px;
 }
 
-.post-meta {
-  font-size: 14px;
-  color: #999;
+.header p {
+  text-align: left;
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
-.post-meta span {
-  margin-right: 10px;
+.search-bar {
+  position: relative;
+  width: 25vw;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+.main-content {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  justify-content: center;
+}
+
+.blog-container {
+  max-width: 34vw;
+  height: 60vh;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-container {
+  height: 28vh;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .image {
+  transform: scale(1.08);
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.blog-title {
+  font-size: 1.2rem;
+  text-align: start;
+  padding: 10px 20px;
+  font-weight: 800;
+}
+
+.description {
+  flex-basis: 5vh;
+  font-size: 0.85rem;
+  text-align: start;
+  padding: 0px 20px;
+  color: #666;
+}
+
+.student-profile {
+  font-size: 0.8rem;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-container {
+  width: 11vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.student-account {
+  height: 2rem;
+  margin-right: 1vw;
+  width: 2rem;
+  border-radius: 50%;
+  transition: filter 0.3s ease;
+}
+
+.student-profile span {
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+#likes {
+  position: relative;
+  align-self: center;
+  justify-self: center;
+  height: 2rem;
+  width: 2rem;
+  bottom: -5px;
+  transition: transform 0.3s ease;
+}
+
+#likes:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.account-container:hover .student-account {
+  filter: hue-rotate(90deg);
 }
 
 .container {
@@ -250,13 +313,13 @@ body {
 }
 
 .redeem-button:hover {
-  background-color: #45a049; /* Darker green on hover */
-  transform: translateY(-3px); /* Slight lift on hover */
+  background-color: #45a049;
+  transform: translateY(-3px);
 }
 
 .redeem-button:active {
-  background-color: #3e8e41; /* Even darker green on click */
-  transform: translateY(1px); /* Slight push down on click */
+  background-color: #3e8e41;
+  transform: translateY(1px);
 }
 
 .contest-details ul {
