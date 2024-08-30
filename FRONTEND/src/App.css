@@ -84,10 +84,27 @@ body {
   background-color: #e0e0e0;
 }
 
+.img-of-day {
+  background-image: url("components/images/img-of-day.jpg");
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-of-dtext {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
 .image-slider {
   position: relative;
   max-height: 500px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .slider {
@@ -107,35 +124,6 @@ body {
   object-fit: cover;
   border-radius: 8px;
 }
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-.prev-btn {
-  left: 10px;
-}
-
-.next-btn {
-  right: 10px;
-}
-
 .services {
   max-width: 1200px;
   margin: 40px auto;
