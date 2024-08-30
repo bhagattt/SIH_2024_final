@@ -1,10 +1,15 @@
+
+
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
+app.use(cors());
 const port = process.env.PORT || 3000;
 const apiKey = process.env.API_KEY;
 const genAI = new GoogleGenerativeAI(apiKey);
+  // Ensure the API key is being correctly fetched
 
 const generationConfig = {
     stopSequences: ["red"],
@@ -43,4 +48,5 @@ app.post('/generate-content', function(req, res) {
 // Start the server
 app.listen(port, function() {
     console.log(`Server is running on port ${port}`);
+   console.log(apiKey);
 });
