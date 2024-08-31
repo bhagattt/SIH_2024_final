@@ -1,81 +1,90 @@
 import React, { useState } from "react";
-import "./Chatbot.css";
-import botIcon from "../src/components/images/bot-icon.png";
 
-function Chatbot() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [prompt, setPrompt] = useState("");
-  const [conversation, setConversation] = useState([]);
-  const [loading, setLoading] = useState(false);
+const Chatbot = () => {
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState("");
+  const [showChatbot, setShowChatbot] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
+  const createChatLi = (message, classname) => (
+    <li className={`chat ${classname}`} key={Date.now()}>
+      {" "}
+      {/* Key for unique elements */}
+      {classname === "outgoing" ? (
+        <p>{message}</p>
+      ) : (
+        <>
+          <img src="images/bot.jpg" alt="" />
+          <p>{message}</p>
+        </>
+      )}
+    </li>
+  );
+
+  const generateResponse = async (userMessage) => {
+    const API_URL = "http://localhost:3000/generate-content";
 
     try {
-      const res = await fetch("/generate-content", {
+      const response = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ prompt }),
+        body: JSON.stringify({ prompt: userMessage }),
       });
-      const data = await res.json();
-      setConversation((prevConversation) => [
-        ...prevConversation,
-        { prompt, response: data.generatedText },
+      const data = await response.json();
+      const botMessage =
+        data.generatedText || "Sorry, I didn't understand that.";
+      setMessages((prevMessages) => [
+        ...prevMessages.slice(0, -1), // Remove "Thinking..." message
+        createChatLi(botMessage, "incoming"),
       ]);
-      setPrompt("");
     } catch (error) {
       console.error("Error:", error);
-      setConversation((prevConversation) => [
-        ...prevConversation,
-        { prompt, response: "Error generating response" },
+      setMessages((prevMessages) => [
+        ...prevMessages.slice(0, -1), // Remove "Thinking..." message
+        createChatLi(
+          "Error: Unable to get a response from the server.",
+          "incoming"
+        ),
       ]);
-    } finally {
-      setLoading(false);
     }
   };
 
+  const handleChat = () => {
+    if (!input.trim()) return;
+
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      createChatLi(input, "outgoing"),
+      createChatLi("Thinking...", "incoming"),
+    ]);
+
+    generateResponse(input);
+    setInput("");
+  };
+
   return (
-    <div className="chatbot-container">
-      <img
-        src={botIcon}
-        alt="Chatbot"
-        className="chatbot-icon"
-        onClick={() => setIsOpen(!isOpen)}
-      />
-      {isOpen && (
-        <div className="chatbot">
-          <h1>Chat with the Bot</h1>
-          <div className="chat-history">
-            {conversation.map((entry, index) => (
-              <div key={index} className="chat-entry">
-                <p>
-                  <strong>You:</strong> {entry.prompt}
-                </p>
-                <p>
-                  <strong>Bot:</strong> {entry.response}
-                </p>
-              </div>
-            ))}
-          </div>
-          <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={prompt}
-              onChange={(e) => setPrompt(e.target.value)}
-              placeholder="Type your message..."
-              required
+    <div>
+      <button
+        className="chatbot-toggler"
+        onClick={() => setShowChatbot((prev) => !prev)}
+      >
+        Toggle Chatbot
+      </button>
+      {showChatbot && (
+        <div className="chatbox-container">
+          <ul className="chatbox">{messages}</ul>
+          <div className="chat-input">
+            <textarea
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
             />
-            <button type="submit" disabled={loading}>
-              {loading ? "Sending..." : "Send"}
-            </button>
-          </form>
+            <span onClick={handleChat}>Send</span>
+          </div>
         </div>
       )}
     </div>
   );
-}
+};
 
 export default Chatbot;
