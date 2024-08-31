@@ -1,0 +1,231 @@
+body{
+    height: 2000px;
+   /* background-color:  #81ddbb; */
+}
+h3{
+ font-size: 60px;
+}
+.img1{
+width: 80px;
+border-radius: 50%;
+margin-left: 50px;
+}
+.img2{
+    width: 140px;
+    position: absolute;
+    top: 01px;
+    right: 180px;
+    mix-blend-mode: color-burn;
+    /* extra */
+}
+.pagepicture{
+    display: inline-block;
+    width: 07%;
+    vertical-align: top;
+    margin-top: 20px;
+    /* margin-left: ; */
+}
+.titleinfo{
+    display: inline-block;
+    width: 50%;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.title{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.fontdenabas{
+    font-size: 18px;
+}
+.header{
+    height: 135px;
+    /* background-color: aqua; */
+    border-bottom: solid 2px;
+ /* position: fixed; */
+    /* box-shadow: (0,0,0,.15); */
+    /* box-shadow: 0,0,0,.15 rgba(0,0,0,.15); */
+}
+
+/* sidebaer */
+/* Style the sidebar container */
+/* Style the sidebar container */
+.body{
+    height: 1000px;
+}
+/* .sidebar {
+    width: 250px;
+    background-color: #f0f0f0; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    display: inline-block; 
+    vertical-align: top; 
+    height: 600px;
+  } */
+  .sidebar {
+    width: 250px;
+    background-color: #6797b8; 
+    padding: 20px; 
+    border: 1px solid #ddd; 
+    display: inline-block; 
+    vertical-align: top; 
+    height: 600px;
+    position: fixed;
+    top: 200px;
+    left: 9px;
+  }
+
+
+  
+  /* Style the sidebar links */
+  .sidebar-link {
+    display: block; /* make the links block-level elements */
+    padding: 29px; /* add some padding */
+    text-decoration: none; /* remove the underline */
+    color: #333; /* dark gray text color */
+   font-size: 18px;
+   font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the sidebar images */
+  .sidebar-image {
+    width: 20px; /* adjust the image width to your liking */
+    height: 20px; /* adjust the image height to your liking */
+    margin-right: 10px; /* add some margin between the image and the link text */
+    vertical-align: middle; /* align the image to the middle of the link text */
+  }
+  
+  /* Hover effect for the links */
+  .sidebar-link:hover {
+    background-color: #0a3450; /* light gray background on hover */
+    color: #2571a4;; /* darker gray text color on hover */
+  }
+  
+  /* Style the main content area */
+  .main-content {
+    display: inline-block; /* make the main content area an inline-block element */
+    vertical-align: top; /* align the main content area to the top of the parent element */
+    width: calc(100% - 270px); /* calculate the width of the main content area */
+    padding: 20px; /* add some padding */
+  }
+
+
+
+
+
+/* .searchbar{
+    height: 30px;
+    border-bottom: solid 2px ;
+    display: block;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-items: flex-start;
+}
+
+.scholsarshipdisplay{
+     display: inline-block;
+     margin-left: 30px;
+  }
+  .searchbar{
+    display: block;
+    width: 1000px;
+  } */
+
+
+
+
+  .contents{
+    background-color: rgb(155, 205, 243);
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px;
+    margin-left: 60px;
+
+    
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(192, 192, 192);
+    border-radius: 2px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  
+  }
+  .contents a{
+    text-decoration: none;
+    color: rgb(6, 82, 105);
+  }
+  .grid{
+    /* display: inline-block; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    margin-left: 250px;
+  }
+  .date{
+    margin-left: 119px;
+    padding-top: -100px;
+  }
+
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 343px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.card-info-item {
+    display: flex;
+    align-items: center;
+}
+
+.card-info-label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.card-info-value {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.progress-bar-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 5px;
+}
+
+.progress-bar-dot.active {
+    background-color: #4CAF50;
+}
+
+.deadline {
+    color: #555;
+    font-size: 0.9em;
+}

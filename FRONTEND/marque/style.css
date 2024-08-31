@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+}
+.wrapper{
+    border: 1px solid black;
+    width:  90%;
+    max-width:1200px ; /*chetan width yaha se dena*/
+    margin-inline: auto;
+    position: relative;
+    height: 50px;/*ye tera div ka height*/
+    margin-top: 50px;
+    overflow: hidden;
+      
+}
+@keyframes Scroll{
+    /* from{} */
+    to{
+        left: -1000px;/*scrolling item ka width ayega yaha par*/
+    }
+}
+.item{
+    width: 1000px;/*jitna bada text hai tera uske hisab se ye length dediyo*/
+    height: 50px;/*ye tera div ka height jo ghumega dono item aur iska height same rakhna*/
+    background-color: red;
+    border-radius: 6px;
+    position: absolute;
+    left: 100%;
+    animation-name: Scroll;
+    animation-duration: 70s;/*tujhe ye time aur length ko manage karna hoga*/
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+    /* text-overflow: hidden; */
+
+}
+.scrolltext{
+    padding-top: 12px;
+}
