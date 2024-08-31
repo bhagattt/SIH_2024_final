@@ -2,8 +2,8 @@ import React from "react";
 import "./styles.css";
 import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
-import Sch from "../components/images/sch.jpg"; // Scholarship icon
-import Book from "../components/images/book.jpg"; // Textbook icon
+import Sch from "../components/images/sch.jpg";
+import Book from "../components/images/book.jpg";
 
 function Scholarship() {
   return (
