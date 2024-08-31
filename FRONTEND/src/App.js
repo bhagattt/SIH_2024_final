@@ -6,17 +6,23 @@ import Services from "./components/Services";
 import BlogSection from "./components/BlogSection";
 import WannaHelp from "./components/WannaHelp";
 import AboutUs from "./components/AboutUs";
+import Chatbot from "./Chatbot";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <ImgOD />
-      <ImageSlider />
-      <Services />
-      <BlogSection />
-      <WannaHelp />
-      <AboutUs />
+    <div>
+      <div className="App">
+        <Navbar />
+        <ImgOD />
+        <ImageSlider />
+        <Services />
+        <BlogSection />
+        <WannaHelp />
+        <AboutUs />
+      </div>
+      <div className="App">
+        <Chatbot />
+      </div>
     </div>
   );
 }
