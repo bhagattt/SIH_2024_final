@@ -82,13 +82,11 @@ function Scholarship() {
           </div>
           <div className="contents">
             <div className="card">
-              <div className="card-title">
-                Ujjwal Bhavishya Scholarship Samiti
-              </div>
+              <div className="card-title">National Telent Serch Exam NTSE</div>
               <div className="card-info">
                 <div className="card-info-item">
                   <span className="card-info-label">Amount:</span>
-                  <span className="card-info-value">&#8377; 10,000</span>
+                  <span className="card-info-value">&#8377; 12,000</span>
                 </div>
                 <div className="card-info-item">
                   <span className="card-info-label">Deadline:</span>
@@ -108,9 +106,7 @@ function Scholarship() {
           </div>
           <div className="contents">
             <div className="card">
-              <div className="card-title">
-                Ujjwal Bhavishya Scholarship Samiti
-              </div>
+              <div className="card-title">National Science Concours(NSC)</div>
               <div className="card-info">
                 <div className="card-info-item">
                   <span className="card-info-label">Amount:</span>
@@ -125,7 +121,7 @@ function Scholarship() {
               </div>
               <div className="progress-bar">
                 <span className="progress-bar-label">
-                  Government Aided Funds
+                  Foundation For innovation & Experiential Learning
                 </span>
               </div>
             </div>
@@ -135,17 +131,17 @@ function Scholarship() {
           <div className="contents">
             <div className="card">
               <div className="card-title">
-                Ujjwal Bhavishya Scholarship Samiti
+                All India Scholarship Test Exam (AISTE)
               </div>
               <div className="card-info">
                 <div className="card-info-item">
                   <span className="card-info-label">Amount:</span>
-                  <span className="card-info-value">&#8377; 10,000</span>
+                  <span className="card-info-value">&#8377; 20,000</span>
                 </div>
                 <div className="card-info-item">
                   <span className="card-info-label">Deadline:</span>
                   <span className="card-info-value deadline">
-                    Between March and June
+                    Between September and December
                   </span>
                 </div>
               </div>
@@ -160,9 +156,7 @@ function Scholarship() {
           </div>
           <div className="contents">
             <div className="card">
-              <div className="card-title">
-                Ujjwal Bhavishya Scholarship Samiti
-              </div>
+              <div className="card-title">Meri Pehechan Scholarship(MPS)</div>
               <div className="card-info">
                 <div className="card-info-item">
                   <span className="card-info-label">Amount:</span>
@@ -170,9 +164,7 @@ function Scholarship() {
                 </div>
                 <div className="card-info-item">
                   <span className="card-info-label">Deadline:</span>
-                  <span className="card-info-value deadline">
-                    Between March and June
-                  </span>
+                  <span className="card-info-value deadline">No Deadline</span>
                 </div>
               </div>
               <div className="progress-bar">
@@ -186,18 +178,16 @@ function Scholarship() {
           </div>
           <div className="contents">
             <div className="card">
-              <div className="card-title">
-                Ujjwal Bhavishya Scholarship Samiti
-              </div>
+              <div className="card-title">Bose Einstein Scholarship(JNMC)</div>
               <div className="card-info">
                 <div className="card-info-item">
                   <span className="card-info-label">Amount:</span>
-                  <span className="card-info-value">&#8377; 10,000</span>
+                  <span className="card-info-value">&#8377; 40,000</span>
                 </div>
                 <div className="card-info-item">
                   <span className="card-info-label">Deadline:</span>
                   <span className="card-info-value deadline">
-                    Between March and June
+                    Between June and October
                   </span>
                 </div>
               </div>
