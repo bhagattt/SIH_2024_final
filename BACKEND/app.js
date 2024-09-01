@@ -10,7 +10,7 @@ app.use(cors());
 connectDb();
 
 const authRoutes = require('./routes/auth');
-app.use('/auth', authRoutes);
+app.use('/authform', authRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
