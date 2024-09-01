@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
-const AuthForm = () => {
-  const [isLogin, setIsLogin] = useState(true);
+const AuthForm = ({ isLogin }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -18,13 +17,13 @@ const AuthForm = () => {
 
     try {
       if (isLogin) {
-        const res = await axios.post("/login", { email, password });
+        const res = await axios.post("/edup-login", { email, password });
         setMessage(res.data.msg);
         if (res.status === 200) {
           navigate("/");
         }
       } else {
-        const res = await axios.post("/signup", {
+        const res = await axios.post("/edup-signup", {
           name,
           email,
           username,
@@ -112,9 +111,12 @@ const AuthForm = () => {
           </button>
         </form>
         {message && <p className="message">{message}</p>}
-        <button onClick={() => setIsLogin(!isLogin)} className="switch-button">
+        <Link
+          to={isLogin ? "/authform/signup" : "/authform/login"}
+          className="switch-button"
+        >
           {isLogin ? "Switch to Sign Up" : "Switch to Login"}
-        </button>
+        </Link>
       </div>
     </div>
   );

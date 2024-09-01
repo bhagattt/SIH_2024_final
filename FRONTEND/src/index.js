@@ -32,8 +32,12 @@ const router = createBrowserRouter([
     element: <Scholarship />,
   },
   {
-    path: "/authform",
-    element: <AuthForm />,
+    path: "/authform/login",
+    element: <AuthForm isLogin={true} />,
+  },
+  {
+    path: "/authform/signup",
+    element: <AuthForm isLogin={false} />,
   },
   {
     path: "/quiz2",

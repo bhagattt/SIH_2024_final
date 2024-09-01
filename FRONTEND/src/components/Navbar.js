@@ -24,7 +24,7 @@ function Navbar() {
           <Link to="/connect">Connect With Mentors</Link>
         </nav>
         <div>
-          <Link to="/authform" className="login-btn">
+          <Link to="/authform/login" className="login-btn">
             Login
           </Link>
         </div>
