@@ -359,3 +359,126 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f9f9f9, #e9ecef);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px; /* Add some space between the button and the rest of the content */
+  background-color: #f0ad4e;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(240, 173, 78, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  text-decoration: none; /* Ensure the link looks like a button */
+}
+
+.home-button:hover {
+  background-color: #ec971f;
+  transform: translateY(-2px);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(76, 175, 80, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.auth-button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.switch-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #008cba;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 140, 186, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.switch-button:hover {
+  background-color: #007b9e;
+  transform: translateY(-2px);
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+}

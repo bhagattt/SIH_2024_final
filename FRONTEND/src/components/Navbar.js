@@ -1,6 +1,7 @@
 import React from "react";
 import embelem from "./images/embelem.jpg";
 import nep from "./images/Nep.jpg";
+import logo from "./images/logo.jpg";
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -8,25 +9,24 @@ function Navbar() {
     <div>
       <div className="header-container">
         <div className="logo">
-          <a href="index.html">
-            Buisness <br />
-            name
-          </a>
+          <Link to="/">
+            <img src={logo} alt="VidyaSetu" />
+          </Link>
         </div>
         <div className="ind-emb">
           <img src={embelem} alt="Business Emblem" />
         </div>
         <nav className="navbar">
           <Link to="/">Home</Link>
-          <Link to="/connect">Connect With Mentors</Link>
+          <Link to="/scholarship">Scholarship</Link>
           <Link to="/blog">Blog</Link>
           <Link to="/quizzes">Quiz</Link>
-          <Link to="/scholarship">Scholarship</Link>
+          <Link to="/connect">Connect With Mentors</Link>
         </nav>
         <div>
-          <a href="login.html" className="login-btn">
+          <Link to="/authform" className="login-btn">
             Login
-          </a>
+          </Link>
         </div>
         <div className="nep">
           <img src={nep} alt="Business Emblem" />
