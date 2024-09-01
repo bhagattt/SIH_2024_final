@@ -7,7 +7,7 @@ import Quizzes from "./pages/Quizzes";
 import Blog from "./pages/Blog";
 import Scholarship from "./pages/Scholarship";
 import AuthForm from "./pages/AuthForm";
-import Quiz from "./pages/Quiz2"; // Import the Quiz2 component
+import Quiz from "./pages/Quiz2";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
     element: <AuthForm />,
   },
   {
-    path: "/quiz2", // Add this route for Quiz2
+    path: "/quiz2",
     element: <Quiz />,
   },
 ]);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Chatbot.css";
 import botIcon from "../src/components/images/bot-icon.png";
+import userIcon from "../src/components/images/user-icon.png";
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,13 +9,11 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  // Load chat history from local storage
   useEffect(() => {
     const savedMessages = JSON.parse(localStorage.getItem("chatHistory")) || [];
     setMessages(savedMessages);
   }, []);
 
-  // Save chat history to local storage
   useEffect(() => {
     localStorage.setItem("chatHistory", JSON.stringify(messages));
   }, [messages]);
@@ -85,11 +84,23 @@ const Chatbot = () => {
           <h1>Chat with the Bot</h1>
           <div className="chat-history">
             {messages.map((message, index) => (
-              <div key={index} className={`chat-entry ${message.type}`}>
+              <div
+                key={index}
+                className={`chat-entry ${message.type}`}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent:
+                    message.type === "incoming" ? "flex-start" : "flex-end",
+                }}
+              >
                 {message.type === "incoming" && (
-                  <img src="images/bot.jpg" alt="Bot" />
+                  <img src={botIcon} alt="Bot" className="chat-icon" />
                 )}
-                <p>{message.text}</p>
+                <p style={{ margin: "0 10px" }}>{message.text}</p>
+                {message.type === "outgoing" && (
+                  <img src={userIcon} alt="User" className="chat-icon" />
+                )}
               </div>
             ))}
           </div>

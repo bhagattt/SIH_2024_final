@@ -21,7 +21,7 @@ const AuthForm = () => {
         const res = await axios.post("/login", { email, password });
         setMessage(res.data.msg);
         if (res.status === 200) {
-          navigate("/"); // Replace "/dashboard" with the route you want to navigate to after login
+          navigate("/");
         }
       } else {
         const res = await axios.post("/signup", {
@@ -33,7 +33,7 @@ const AuthForm = () => {
         });
         setMessage(res.data.message);
         if (res.status === 200) {
-          navigate("/welcome"); // Replace "/welcome" with the route you want to navigate to after signup
+          navigate("/welcome");
         }
       }
     } catch (error) {

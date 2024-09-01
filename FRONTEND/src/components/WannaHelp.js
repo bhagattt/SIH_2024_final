@@ -5,7 +5,6 @@ function WannaHelp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Handle form submission here (e.g., send email or perform other actions)
     console.log("Email:", email);
   };
 
