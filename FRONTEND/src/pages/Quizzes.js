@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.css";
 import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
@@ -7,10 +8,8 @@ function Quizzes() {
   return (
     <div>
       <Navbar />
-
       <main>
         <div className="container">
-          {/* Quizzes Section */}
           <div className="contests">
             <h2>Quizzes</h2>
             <ul className="contest-list">
@@ -24,7 +23,9 @@ function Quizzes() {
                     <li>Full Length</li>
                   </ul>
                 </div>
-                <button className="virtual-button">Attempt Now</button>
+                <Link to="/quiz2" className="virtual-button">
+                  Attempt Now
+                </Link>
               </li>
               <li className="contest-item">
                 <div className="contest-details">
@@ -36,7 +37,9 @@ function Quizzes() {
                     <li>Full Length</li>
                   </ul>
                 </div>
-                <button className="virtual-button">Attempt Now</button>
+                <Link to="/quiz2" className="virtual-button">
+                  Attempt Now
+                </Link>
               </li>
               <li className="contest-item">
                 <div className="contest-details">
@@ -48,7 +51,9 @@ function Quizzes() {
                     <li>Full Length</li>
                   </ul>
                 </div>
-                <button className="virtual-button">Attempt Now</button>
+                <Link to="/quiz2" className="virtual-button">
+                  Attempt Now
+                </Link>
               </li>
               <li className="contest-item">
                 <div className="contest-details">
@@ -60,12 +65,13 @@ function Quizzes() {
                     <li>Full Length</li>
                   </ul>
                 </div>
-                <button className="virtual-button">Attempt Now</button>
+                <Link to="/quiz2" className="virtual-button">
+                  Attempt Now
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Class Ranking Section */}
           <div className="ranking">
             <h2>Class Ranking</h2>
             <ul className="ranking-list">
@@ -115,9 +121,9 @@ function Quizzes() {
           </div>
         </div>
       </main>
-
       <AboutUs />
     </div>
   );
 }
+
 export default Quizzes;
