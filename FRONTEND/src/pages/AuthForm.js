@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 
+const api = axios.create({
+  baseURL: "http://localhost:4000",
+});
+
 const AuthForm = ({ isLogin }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -17,13 +21,13 @@ const AuthForm = ({ isLogin }) => {
 
     try {
       if (isLogin) {
-        const res = await axios.post("/edup-login", { email, password });
+        const res = await api.post("/authform/login", { email, password });
         setMessage(res.data.msg);
         if (res.status === 200) {
           navigate("/");
         }
       } else {
-        const res = await axios.post("/edup-signup", {
+        const res = await api.post("/authform/signup", {
           name,
           email,
           username,
