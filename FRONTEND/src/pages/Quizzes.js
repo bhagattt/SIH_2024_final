@@ -8,10 +8,10 @@ function Quizzes() {
   return (
     <div>
       <Navbar />
+      <h2>Quizzes</h2>
       <main>
         <div className="container">
           <div className="contests">
-            <h2>Quizzes</h2>
             <ul className="contest-list">
               <li className="contest-item">
                 <div className="contest-details">

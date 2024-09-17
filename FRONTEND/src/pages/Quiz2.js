@@ -60,7 +60,7 @@ const Quiz = () => {
       {result ? (
         <>
           <h2>
-            You Scored {score} out of {data.length}
+            You Scored {score} out of {data.length} Point you Earned:10
           </h2>
           <button onClick={resetQuiz}>Reset</button>
           <Link to="/quizzes" className="home-link">

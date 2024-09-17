@@ -89,67 +89,58 @@ body {
   background-color: #e0e0e0;
 }
 
-.services {
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 0 20px;
+.heas {
+  width: 80%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.services h2 {
+h1 {
   font-size: 36px;
-  margin-bottom: 30px;
   color: #333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  margin-top: 50px;
 }
 
-.service-cards {
+.services {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
-.service-card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 20px;
+.service {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
   margin-bottom: 20px;
-  flex: 0 0 30%;
+  padding: 20px;
   box-sizing: border-box;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: 8px;
 }
 
-.service-card h3 {
+.service img {
+  width: 50px;
+  height: 50px;
+}
+
+.service h2 {
   font-size: 24px;
-  margin-bottom: 10px;
   color: #333;
-}
-
-.service-card hr {
   margin: 10px 0;
-  border-color: #e5e5e5;
 }
 
-.service-card button {
+.service button {
   background-color: #333;
-  color: #ffffff;
+  color: #fff;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
 }
 
-.service-card button:hover {
+.service button:hover {
   background-color: #555;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .blog-section {

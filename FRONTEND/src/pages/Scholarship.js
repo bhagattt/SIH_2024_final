@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "./scho.css";
 import Navbar from "../components/Navbar";
 import AboutUs from "../components/AboutUs";
 import Sch from "../components/images/sch.jpg";
@@ -51,7 +51,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
 
           <div className="contents">
@@ -78,7 +78,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
           <div className="contents">
             <div className="card">
@@ -102,7 +102,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
           <div className="contents">
             <div className="card">
@@ -126,7 +126,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
           <div className="contents">
             <div className="card">
@@ -152,7 +152,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
           <div className="contents">
             <div className="card">
@@ -174,7 +174,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
           <div className="contents">
             <div className="card">
@@ -198,7 +198,7 @@ function Scholarship() {
               </div>
             </div>
             <hr />
-            <a href="#">Scholarship Details</a>
+            <p>Scholarship Details</p>
           </div>
         </section>
       </main>
